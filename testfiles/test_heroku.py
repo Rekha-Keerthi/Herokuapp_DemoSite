@@ -53,7 +53,7 @@ class Test_Herokuapp(BaseClass):
                 dropdown_options.select_by_index(1)
                 self.driver.back()
                 continue
-
+            #Dyanmic Controls link
             elif item.text == "Dynamic Controls":
                 item.click()
                 self.driver.find_element(By.XPATH,"//input[@type='checkbox']").click()

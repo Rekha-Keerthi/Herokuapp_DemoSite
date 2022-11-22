@@ -67,7 +67,25 @@ class Test_Herokuapp(BaseClass):
                 time.sleep(5)
                 self.driver.find_element(By.CSS_SELECTOR,"form[id='input-example'] input").send_keys("Rekha Keerthi")
                 self.driver.find_element(By.CSS_SELECTOR, "form[id='input-example'] button").click()
+                self.driver.back()
+                continue
+
+            elif item.text == 'Entry Ad':
+                item.click()
+                time.sleep(3)
+                heroku_obj.Entry_AD_Close().click()
+                self.driver.back()
+                continue
+
+            elif item.text == "File Upload":
+                item.click()
+
+                #To choose and upload a particular file from the location provide path of file long with file name
+                heroku_obj.Fil_Upload().send_keys("C:/Users/rekha/PycharmProjects1/Google_2011_logo.jpg")
+                self.driver.find_element(By.ID, "file-submit").click()
                 break
+
+        #Digest Authentication
         #self.driver.get("https://admin:admin@the-internet.herokuapp.com/digest_auth")
 
 

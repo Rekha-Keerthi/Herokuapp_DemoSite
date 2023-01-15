@@ -81,7 +81,7 @@ class Test_Herokuapp(BaseClass):
                 item.click()
 
                 #To choose and upload a particular file from the location provide path of file long with file name
-                heroku_obj.Fil_Upload().send_keys("C:/Users/rekha/PycharmProjects1/Google_2011_logo.jpg")
+                heroku_obj.Fil_Upload().send_keys("https://github.com/Rekha-Keerthi/Herokuapp_DemoSite/blob/master/testdata/Google_2011_logo.jpg")
                 self.driver.find_element(By.ID, "file-submit").click()
                 break
 
